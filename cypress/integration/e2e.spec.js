@@ -12,15 +12,15 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         Preenchendo todas opções no checkout
         E validando minha compra ao final */
 
-        
 
-        //print das ações
-        afterEach(() => {cy.screenshot()});
+
+    //print das ações
+    afterEach(() => { cy.screenshot() });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
         //entrar no site
         cy.visit('http://lojaebac.ebaconline.art.br/')
-       
+
         //tela de login e cadastro
         cy.get('.icon-user-unfollow').click()
 
@@ -48,22 +48,28 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
 
+        var indice = 0
+
         //detalhes de faturamento - Usando arquivo de dados
         FaturamentoPage.editarFaturamento(
-            dadosFaturamento[1].nome,
-            dadosFaturamento[1].sobrenome,
-            dadosFaturamento[1].empresa,
-            dadosFaturamento[1].pais,
-            dadosFaturamento[1].rua,
-            dadosFaturamento[1].numero,
-            dadosFaturamento[1].cidade,
-            dadosFaturamento[1].estado,
-            dadosFaturamento[1].cep,
-            dadosFaturamento[1].celular,
-            dadosFaturamento[1].email,
-            dadosFaturamento[1].nota
+            dadosFaturamento[indice].nome,
+            dadosFaturamento[indice].sobrenome,
+            dadosFaturamento[indice].empresa,
+            dadosFaturamento[indice].pais,
+            dadosFaturamento[indice].rua,
+            dadosFaturamento[indice].numero,
+            dadosFaturamento[indice].cidade,
+            dadosFaturamento[indice].estado,
+            dadosFaturamento[indice].cep,
+            dadosFaturamento[indice].celular,
+            dadosFaturamento[indice].email,
+            dadosFaturamento[indice].nota
         )
-        
+
+
+        //pedido recebido
+        cy.get('.woocommerce-notice').should('contain' , 'Obrigado. Seu pedido foi recebido.')
+
     });
 
 

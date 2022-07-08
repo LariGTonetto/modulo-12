@@ -1,8 +1,6 @@
 class FaturamentoPage {
 
     editarFaturamento(nome, sobrenome, empresa, pais, rua, numero, cidade, estado, cep, celular, email, nota) {
-        cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a').click()
-        cy.get(':nth-child(1) > .title > .edit').click()
         cy.get('#billing_first_name').clear().type(nome)
         cy.get('#billing_last_name').clear().type(sobrenome)
         cy.get('#billing_company').clear().type(empresa)
