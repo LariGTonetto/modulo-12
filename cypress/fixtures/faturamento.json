@@ -1,0 +1,44 @@
+[
+    {
+        "nome": "Bia",
+        "sobrenome": "Caramelo",
+        "empresa": "Empresa1",
+        "pais": "Brasil",
+        "rua": "Rua Onze",
+        "numero": "11",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep": "11222333",
+        "celular": "11987654322",
+        "email": "caramelo@teste.com",
+        "nota": "gostaria que viesse para presente"
+    },
+    {
+        "nome": "Camila",
+        "sobrenome": "Danone",
+        "empresa": "Empresa2",
+        "pais": "Brasil",
+        "rua": "Rua Doze",
+        "numero": "12",
+        "cidade": "Santos",
+        "estado": "São Paulo",
+        "cep": "11222334",
+        "celular": "11987654323",
+        "email": "danone@teste.com",
+        "nota": "gostaria que viesse bem embalado"
+    },
+    {
+        "nome": "Dani",
+        "sobrenome": "Estilo",
+        "empresa": "Empresa3",
+        "pais": "Brasil",
+        "rua": "Rua Treze",
+        "numero": "13",
+        "cidade": "Campinas",
+        "estado": "São Paulo",
+        "cep": "11222335",
+        "celular": "11987654324",
+        "email": "estilo@teste.com",
+        "nota": "gostaria que viesse com uma embalagem preta"
+    }
+]

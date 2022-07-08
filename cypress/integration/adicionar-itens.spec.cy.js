@@ -16,7 +16,7 @@ describe('Funcionalidade Página de Produtos', () => {
 
     });
 
-    it('Deve adicionar produto no carrinho', () => {
+    it.only('Deve adicionar produto no carrinho e concluir compra', () => {
         var quantidade = 4
 
         cy.get('[class="product-block grid"]').contains('Aero Daily Fitness Tee').click()
@@ -24,18 +24,18 @@ describe('Funcionalidade Página de Produtos', () => {
         cy.get('.button-variable-item-Brown').click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
-
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
-
+        cy.get('.woocommerce-message > .button').click()
+        cy.get('.checkout-button').click()
 
     });
 
-/*
-it('Deve adicionar produtos ao carrinho - Usando Comando Customizado', () => {
-    cy.addProdutos('Aero Daily Fitness Tee', 'XS', 'Brown', 4)
-    
-});
-*/
- 
+    /*
+    it('Deve adicionar produtos ao carrinho - Usando Comando Customizado', () => {
+        cy.addProdutos('Aero Daily Fitness Tee', 'XS', 'Brown', 4)
+        
+    });
+    */
 
+    
 });
