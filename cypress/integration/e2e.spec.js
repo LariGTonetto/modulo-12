@@ -12,8 +12,6 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         Preenchendo todas opções no checkout
         E validando minha compra ao final */
 
-
-
     //print das ações
     afterEach(() => { cy.screenshot() });
 
@@ -48,9 +46,9 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
 
-        var indice = 0
-
         //detalhes de faturamento - Usando arquivo de dados
+        var indice = 0
+        
         FaturamentoPage.editarFaturamento(
             dadosFaturamento[indice].nome,
             dadosFaturamento[indice].sobrenome,
