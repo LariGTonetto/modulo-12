@@ -64,11 +64,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             dadosFaturamento[indice].nota
         )
 
-
         //pedido recebido
         cy.get('.woocommerce-notice').should('contain' , 'Obrigado. Seu pedido foi recebido.')
-
     });
-
-
 })
