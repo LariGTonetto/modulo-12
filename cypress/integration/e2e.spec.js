@@ -39,10 +39,10 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         //adicionar produto - Usando Comandos Customizados
         cy.addProdutosA('Aero Daily Fitness Tee', 3)
         cy.addProdutosB('Ajax Full-Zip Sweatshirt', 2)
-        cy.addProdutosC('Ariel Roll Sleeve Sweatshirt', 1)
+        cy.addProdutosC('Argus All-Weather Tank', 1)
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
-       
+
         //detalhes de faturamento - Usando Arquivo de Dados
         var indice = 0
         FaturamentoPage.editarFaturamento(
@@ -61,7 +61,5 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
         //pedido recebido
         cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
-
     });
-
 })

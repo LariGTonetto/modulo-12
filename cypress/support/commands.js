@@ -52,8 +52,8 @@ Cypress.Commands.add('addProdutosB', (nome2, quantidade2) => {
 
 Cypress.Commands.add('addProdutosC', (nome3, quantidade3) => {
     cy.get('[class="product-block grid"]').contains(nome3).click()
-    cy.get('.button-variable-item-S').click()
-    cy.get('.button-variable-item-Purple').click()
+    cy.get('.button-variable-item-XS').click()
+    cy.get('.button-variable-item-Gray').click()
     cy.get('.input-text').clear().type(quantidade3)
     cy.get('.single_add_to_cart_button').click()
 });
