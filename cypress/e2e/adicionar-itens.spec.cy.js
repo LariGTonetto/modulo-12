@@ -12,16 +12,16 @@ describe('Funcionalidade Página de Produtos', () => {
             //.last()
             //.first()
             //.eq(3)
-            .contains('Aero Daily Fitness Tee').click()
+            .contains('Ajax Full-Zip Sweatshirt').click()
 
     });
 
     it.only('Deve adicionar produto no carrinho e concluir compra', () => {
         var quantidade = 4
 
-        cy.get('[class="product-block grid"]').contains('Aero Daily Fitness Tee').click()
+        cy.get('[class="product-block grid"]').contains('Ajax Full-Zip Sweatshirt').click()
         cy.get('.button-variable-item-XS').click()
-        cy.get('.button-variable-item-Brown').click()
+        cy.get('.button-variable-item-Red').click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
